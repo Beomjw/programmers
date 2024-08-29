@@ -1,10 +1,10 @@
 def solution(sides):
-    # 두 변을 오름차순으로 정렬
-    a, b = sorted(sides)
+    count = 0
+    s = sorted(sides)
+    min = s[0]
+    max = s[1]
     
-    # 나머지 한 변이 될 수 있는 범위
-    min_x = b - a + 1  # x > b - a 인 경우
-    max_x = a + b - 1  # x < a + b 인 경우
-    
-    # 가능한 정수의 개수는 max_x - min_x + 1
-    return max_x - min_x + 1
+    count = max - (max - min)
+    count += (min + max) - max - 1
+
+    return count
