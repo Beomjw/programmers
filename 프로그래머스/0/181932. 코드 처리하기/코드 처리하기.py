@@ -10,7 +10,6 @@ def solution(code):
     # abc1abc1abc
     # a c  b  a c
     mode = 0
-    
     for i in range(len(code)):
         if code[i] == '1':
             mode = 1 - mode
